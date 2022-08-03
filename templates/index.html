@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>marksprediction</title>
+
+    <style>
+        body{
+            background-color: rgb(192, 102, 192);
+        }
+        h1{
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        h3{
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        input{
+            border-radius: 0.3em;
+            width: 20em;
+            height: 2.4em;
+            margin-left: 41%;
+            background-color: black;
+            color: white;
+        }
+        .button{
+        padding: 10px 20px;
+        text-align: center; 
+        display: inline-block;
+         font-size: 16px;
+         color: white;
+         background-color: black;
+         cursor: pointer;
+         border-radius: 0.3em;
+         margin-left: 46.5%;
+         margin-top: 50px;
+    }
+    button:hover{
+        background-color :white;
+        color: var(--darkgray);
+        border: 4px solid black;
+    }
+    </style>
+
+  </head>
+  <body>
+    <h1>STUDENT MARKS PREDICTION</h1>
+    <form action="/predict" method="POST">
+        <div>
+            <h3>Enter Number of Courses</h3>
+            <input class="input" type="text" name="number_courses" placeholder="Enter number of courses you opted">
+        </div>
+
+
+        <div>
+            <h3>Enter Number of Hours</h3>
+            <input class="input" type="text" name="time_study" placeholder="Enter number of hours you study single day">
+        </div>
+
+        <div>
+            <button class="button" type="submit">SUBMIT</button></div>
+            <div><h1 style=" text-align: center; color: black; ">PREDICTED MARKS: {{result}}</h1>
+        </div>
+    </form>
+  </body>
+</html>
